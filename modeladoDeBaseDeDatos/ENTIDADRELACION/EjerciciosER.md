@@ -88,7 +88,7 @@ una escuela administra alumnos y materias
 nota: la relacion se debe llamar 
 **inscibe**
 
-![ejercicio solucion 2](../ENTIDADRELACION/imagenes/Ejercicio3.png)
+![ejercicio solucion 3](../ENTIDADRELACION/imagenes/Ejercicio3.png)
 
 
 ## ejercicio 4 
@@ -123,14 +123,44 @@ una empresa se dedica a la vejta de productos al por mayor necesita y regitrar l
 8. el detalle del pedido no existe sin producto 
 9. el detalle del pediddo almacena cantidad vendida y precio de venta 
 
-![ejercicio solucion 2](../ENTIDADRELACION/imagenes/Ejercicio4.png) 
+![ejercicio solucion 4](../ENTIDADRELACION/imagenes/Ejercicio4.png) 
 
 ## EJERCICIO 5
 
+1. The company is organized into departments. Each department has a unique name, a 
+unique number, and a particular employee who manages the department.We keep track 
+of the start date when that employee began managing the department. A department 
+may have several locations. 
+2. A department controls a number of projects, each of which has a unique name, a unique 
+number, and a single location. 
+3. We store each employee's name, Social Security number, address, salary, sex (gender), 
+and birth date. An employee is assigned to one department, but may work on several 
+projects, which are not necessarily controlled by the same department. We keep track of 
+the current number of hours per week that an employee works on each project. We also 
+keep track of the direct supervisor of each employee (who is another employee). 
+4. We want to keep track of the dependents of each employee for insurance purposes.We 
+keep each dependent's first name, sex, birth date, and relationship to the employee. 
 
-![ejercicio solucion 2](../ENTIDADRELACION/imagenes/Ejercicio5.png)
+![ejercicio solucion 5](../ENTIDADRELACION/imagenes/Ejercicio5.png)
 
 ## EJERCICIO 6 
 
-![ejercicio solucion 2](../ENTIDADRELACION/imagenes/Ejercicio6.png)
+1. The company is organized into departments. Each department has a unique name, a 
+unique number, and a particular employee who manages the department.We keep track 
+of the start date when that employee began managing the department. A department 
+may have several locations. 
+2. A department controls a number of projects, each of which has a unique name, a unique 
+number, and a single location. 
+3. We store each employee's name, Social Security number, address, salary, sex (gender), 
+and birth date. An employee is assigned to one department, but may work on several 
+projects, which are not necessarily controlled by the same department. We keep track of 
+the current number of hours per week that an employee works on each project. We also 
+keep track of the direct supervisor of each employee (who is another employee). 
+4. We want to keep track of the dependents of each employee for insurance purposes.We 
+keep each dependent's first name, sex, birth date, and relationship to the employee. 
 
+![ejercicio solucion 6](../ENTIDADRELACION/imagenes/Ejercicio6.png)
+
+## EJERCICIO 7
+
+![ejercicio solucion 7](../ENTIDADRELACION/imagenes/ER%20NUM%207.png)

@@ -1,106 +1,49 @@
-# ejercicios 
-create database bdconstraints;
-go 
+# Ejercicios relacionales 
 
-use bdconstraints;
-go
+ 
+## Ejercicio 1
 
--- razon de cardinalidad de 1 a 1
-create table paciente (
-numpaciente int not null,
-nombre varchar(30) not null,
-apellido1  varchar(20) not null,
-apellido2  varchar(20) null,
-fechanaci date not null,
-constraint pk_paciente
-primary key (numpaciente)
-);
+![ejercicio solucion 1](../ENTIDADRELACION/imagenes/Ejercicio1.png)
+![ejercicio solucion 1](../RELACIONAL/image/Ejercicio1ModeloRelacional.png)
 
-go
+<br>
 
-create table expediente(
-numexp int not null,
-fechapertura date not null,
-tipodesangre char(30) not null,
-paciente int not null,
-constraint pk_expediente
-primary key (numexp),
-constraint unique_numpaciente
-unique(paciente),
-constraint fk_expediente_paciente
-foreign key (paciente)
-references paciente(numpaciente)
-);
-go
+## Ejercicio 2
 
-insert into paciente 
-values (1, 'kevin', 'kosner', 'lopez' ,'2007-02-18');
+![ejercicio solucion 2](../ENTIDADRELACION/imagenes/Ejercicio2.png)
+![ejercicio solucion 2](../RELACIONAL/image/Ejercicio2ModeloRelacional.png)
 
-insert into paciente 
-values (2, 'daniel', 'martinez', 'mendoza' ,'2005-01-30');
+<br>
 
-insert into paciente 
-values (3, 'alfonso' ,'cruz', 'meses' ,'2006-08-12');
+# Ejercicio 3
 
-select *
-from expediente;
+![ejercicio solucion 3](../ENTIDADRELACION/imagenes/Ejercicio3.png)
+![ejercicio solucion 3](../RELACIONAL/image/Ejercicio3ModeloRelacional.png)
 
-insert expediente
-values (1,GETDATE(),'+O', 1);
+<br>
 
-insert expediente
-values (2,GETDATE(),'+A', 2);
+## ejercicio 4 
 
-insert expediente
-values (3,GETDATE(),'+O', 3);
+![ejercicio solucion 4](../ENTIDADRELACION/imagenes/Ejercicio4.png) 
+![ejercicio solucion 4](../RELACIONAL/image/Ejercicio4ModeloRelacional.png)
 
-select e.numexp,
-       e.fechapertura,
-       e.tipodesangre,
-       concat(p.nombre,'',p.apellido1,'',p.apellido2)
-       as [nombre completo]
+<br>
 
-from expediente as e
-inner join paciente as p
-on e.paciente = p.numpaciente;
+## EJERCICIO 5
 
+![ejercicio solucion 5](../ENTIDADRELACION/imagenes/Ejercicio5.png)
+![ejercicio solucion 5](../RELACIONAL/image/Ejercicio5ModeloRelacional.png)
 
--- razon de cardinalidad de 1 a n 
-create table profesor (
-numprof int not null identity(1,1) primary key,
-nombre varchar(50) not null,
-apellido1 varchar(30) not null,
-apellido2 varchar(30)
-);
-go
+<br>
 
-create table curso(
-numcurso int not null,
-nombre varchar(20) not null,
-creditos int not null,
-numprof int not null,
-constraint pk_curso
-primary key (numcurso),
-constraint unique_nombre
-unique (nombre),
-constraint check_creditos
-check (creditos>0),
-constraint fk_curso_profesor
-foreign key (numprof)
-references profesor (numprof)
-);
-go
+## EJERCICIO 6 
 
-create table especialidad (
-numesp int not null,
-numprof int not null,
-nombreEsp varchar(30) not null,
-constraint pk_especialidad 
-primary key (numesp, numprof),
-constraint unique_nombreEsp
-unique (nombreEsp),
-constraint fk_especialidad_profesor
-foreign key (numprof)
-references profesor (numprof)
-); 
-go
+![ejercicio solucion 6](../ENTIDADRELACION/imagenes/Ejercicio6.png)
+![ejercicio solucion 6](../RELACIONAL/image/Ejercicio6ModeloRelacional.png)
+
+<br>
+
+## EJERCICIO 7
+
+![ejercicio solucion 7](../ENTIDADRELACION/imagenes/ER%20NUM%207.png)
+![ejercicio solucion 7](../RELACIONAL/image/Ejercicio7ModeloRelacional.png)
